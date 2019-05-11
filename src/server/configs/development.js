@@ -2,7 +2,7 @@ import path from 'path';
 import appRootPath from 'app-root-path';
 
 const appRoot = appRootPath.resolve('./');
-const secretsFolder = path.join(appRoot, 'dev-secrets');
+const secretsFolder = process.env.VXL_AFS_SECRETS_FOLDER || path.join(appRoot, 'dev-secrets');
 
 const credentialFiles = {
   basePath: path.join(secretsFolder, 'ssl'),
@@ -18,8 +18,6 @@ const jwtSecretFiles = {
 
 const httpPort = 8080;
 const httpsPort = 8443;
-
-const webpackHotClientPort = 18080;
 
 const sendRecoveryTokenInterval = 1 * 20 * 1000;
 const externalUrl = 'https://localhost:8443';
@@ -44,8 +42,6 @@ export {
   jwtSecretFiles,
   httpPort,
   httpsPort,
-
-  webpackHotClientPort,
 
   sendRecoveryTokenInterval,
   externalUrl,

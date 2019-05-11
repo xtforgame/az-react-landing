@@ -2,7 +2,7 @@ import path from 'path';
 import appRootPath from 'app-root-path';
 
 const appRoot = appRootPath.resolve('./');
-const secretsFolder = path.join(appRoot, 'dev-secrets');
+const secretsFolder = process.env.VXL_AFS_SECRETS_FOLDER || path.join(appRoot, 'dev-secrets');
 
 const credentialFiles = {
   basePath: path.join(secretsFolder, 'ssl'),

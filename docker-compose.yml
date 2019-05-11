@@ -1,17 +1,57 @@
+# EnvironmentVariableList:
+#   Global:
+#     GDC_DOCKER_COMPOSE_PROJECT_NAME: '<folder name>'
+#     VXL_IMAGE_NS: vxlinternal
+#     VXL_IMAGE_PROJ: default
+#     VXL_CONTAINER_NS: vxlinternal
+#     VXL_CONTAINER_PROJ: default
+#   Project:
+#     VXL_AFS_SECRETS_FOLDER:
+
 version: '3'
 services:
+  pg-master:
+    image: postgres:9.6
+
+    container_name: ${VXL_CONTAINER_NS:-vxlinternal}-${VXL_CONTAINER_PROJ:-default}-afs-pg-master
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: xxxx1234
+      PGDATA: /var/lib/postgresql/data/pgdata
+
+    ports:
+      - "${VXL_PG_PORT:-5432}:5432"
+
+    volumes:
+      - "../pgdata:/var/lib/postgresql/data/pgdata"
+
+
   webserver:
-    image: seed-proj/webserver
+    image: ${VXL_IMAGE_NS:-vxlinternal}/${VXL_IMAGE_PROJ:-default}/afswebserver
     build:
       context: .
 
-    container_name: webserver-${CONTAINER_POSTFIX:-default}
+    container_name: ${VXL_CONTAINER_NS:-vxlinternal}-${VXL_CONTAINER_PROJ:-default}-afs-webserver
+    links:
+      - "pg-master:postgres"
+
+    environment:
+      VXL_AFS_SECRETS_FOLDER: ${VXL_AFS_SECRETS_FOLDER}
+
+    depends_on:
+      - "pg-master"
 
     volumes:
       - ".:/usr/volumes/src/"
+      - "../secrets:${VXL_AFS_SECRETS_FOLDER}"
 
     command: bash docker-cmd.sh
 
-    ports:
-      - "443:443"
-      - "80:80"
+    # ports:
+    #   - "443:443"
+    #   - "80:80"
+
+networks:
+  default:
+    external:
+      name: mainginx_net
