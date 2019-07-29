@@ -2,12 +2,16 @@
 
 import React, { useLayoutEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles, ThemeProvider } from '@material-ui/styles';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import { updatePageContext } from '~/styles/getPageContext';
+
 import Section01 from './Section01';
 import Section02 from './Section02';
 import Section03 from './Section03';
 import Section04 from './Section04';
 import AppBar from './AppBar';
+import Contact from './Contact';
 import Footer from './Footer';
 
 const useStyles = makeStyles(theme => ({
@@ -136,16 +140,24 @@ export default (props) => {
   }, []);
 
   // console.log('classes :', classes);
-  return (
-    <div id="wrapper">
-      <header></header>
-      <Section01 />
-      <Section02 />
-      <Section03 />
-      <Section04 />
 
-      <AppBar />
-      <Footer />
-    </div>
+  const pageContext2 = updatePageContext({ direction: 'ltr', paletteType: 'scoop' });
+
+  return (
+    <MuiThemeProvider theme={pageContext2.theme}>
+      <ThemeProvider theme={pageContext2.theme}>
+        <div id="wrapper">
+          <header></header>
+          <Section01 />
+          <Section02 />
+          <Section03 />
+          <Section04 />
+          <AppBar />
+
+          <Contact />
+          <Footer />
+        </div>
+      </ThemeProvider>
+    </MuiThemeProvider>
   );
 };

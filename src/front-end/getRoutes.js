@@ -33,6 +33,7 @@ import testCase01 from '~/test-cases/test-case-01';
 import Login from '~/containers/Login';
 import Recovery from '~/containers/Recovery';
 
+import LandingMainFrame from '~/containers/Landing/MainFrame';
 import Landing from '~/containers/Landing';
 
 import getListHierarchy from '~/containers/MainFrame/getListHierarchy';
@@ -61,13 +62,22 @@ const globalRouteConfig = {
     routes: [{
       name: 'redirect',
       path: '/',
-      component: () => <Redirect to={{ pathname: '/landing' }} />,
+      component: () => <Redirect to={{ pathname: '/landing/home' }} />,
       exact: true,
     },
     {
-      name: 'landing',
+      name: 'landing-main',
       path: '/landing',
-      component: Landing,
+      component: LandingMainFrame,
+      routeViews: [{
+        switch: true,
+        name: defaultName,
+        routes: [{
+          name: 'landing',
+          path: '/landing/home',
+          component: Landing,
+        }],
+      }],
     },
     {
       name: 'login',

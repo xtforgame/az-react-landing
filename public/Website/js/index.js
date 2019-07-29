@@ -108,7 +108,7 @@ function changePic( value ){
   else if( value == 0 ){ $( arrowLeft ).css( "opacity", 0.2 ) }
   else if( value == picMax - 1 ){ $( arrowRight ).css( "opacity", 0.2 ) }
   $( pic ).animate( { opacity: 0 }, function(){
-    $( pic ).attr( "src", "images/s04/pic"+ value +".png" );
+    $( pic ).attr( "src", "Website/images/s04/pic"+ value +".png" );
     $( pic ).animate( { opacity: 1 } );
     $( dot + value ).animate( { opacity: 1 } );
   });

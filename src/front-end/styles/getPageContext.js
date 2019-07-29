@@ -48,6 +48,24 @@ export function getTheme(theme) {
       default: grey[200],
     };
     paletteType = 'light';
+  } else if (theme.paletteType === 'scoop') {
+    primary = {
+      light: '#ffee97',
+      main: '#e1bc67',
+      dark: '#ad8c39',
+      contrastText: common.white,
+    };
+    secondary = {
+      light: '#78deff',
+      main: '#3dacd3',
+      dark: '#007da2',
+      contrastText: common.white,
+    };
+    background = {
+      paper: grey[100],
+      default: grey[200],
+    };
+    paletteType = 'light';
   }
 
   return createMuiTheme({
