@@ -33,6 +33,8 @@ import testCase01 from '~/test-cases/test-case-01';
 import Login from '~/containers/Login';
 import Recovery from '~/containers/Recovery';
 
+import Landing from '~/containers/Landing';
+
 import getListHierarchy from '~/containers/MainFrame/getListHierarchy';
 
 const testCases = [testCase00, testCase01];
@@ -59,8 +61,13 @@ const globalRouteConfig = {
     routes: [{
       name: 'redirect',
       path: '/',
-      component: () => <Redirect to={{ pathname: '/home' }} />,
+      component: () => <Redirect to={{ pathname: '/landing' }} />,
       exact: true,
+    },
+    {
+      name: 'landing',
+      path: '/landing',
+      component: Landing,
     },
     {
       name: 'login',
