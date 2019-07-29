@@ -364,6 +364,21 @@ export default (sequelizeStore) => {
           },
         },
       },
+      subscription: {
+        columns: {
+          id: {
+            type: Sequelize.BIGINT.UNSIGNED,
+            primaryKey: true,
+            autoIncrement: true,
+          },
+          name: Sequelize.STRING(900),
+          email: Sequelize.STRING(900),
+          data: {
+            type: Sequelize.JSONB,
+            defaultValue: {},
+          },
+        },
+      },
     },
     associationModels: {
       userUserGroup: {

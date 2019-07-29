@@ -8,6 +8,7 @@ import RecoveryRouter from '~/routers/RecoveryRouter';
 import OrganizationRouter from '~/routers/OrganizationRouter';
 import ProjectRouter from '~/routers/ProjectRouter';
 import MemoRouter from '~/routers/MemoRouter';
+import SubscriptionRouter from '~/routers/SubscriptionRouter';
 
 export default class RouterManager extends ServiceBase {
   static $name = 'routerManager';
@@ -40,6 +41,7 @@ export default class RouterManager extends ServiceBase {
       MemoRouter,
       OrganizationRouter,
       ProjectRouter,
+      SubscriptionRouter,
     ]
     .map(Router => new Router({
       authKit,
