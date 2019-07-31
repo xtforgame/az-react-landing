@@ -213,7 +213,7 @@ const modelsDefine = {
       epics,
       selectors: {
         createSelector,
-        baseSelector: state => state.get('global').organizations,
+        baseSelector: state => state.get('global').subscriptions,
       },
     },
   },
