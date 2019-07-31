@@ -18,6 +18,7 @@ const {
   memoReducer,
   organizationReducer,
   projectReducer,
+  subscriptionReducer,
 } = modelMap.reducers;
 
 const persistence = (state = { rememberUser: false }, action) => {
@@ -77,6 +78,7 @@ export default combineReducers({
   memos: memoReducer,
   organizations: organizationReducer,
   projects: projectReducer,
+  subscriptions: subscriptionReducer,
   persistence,
   appTempState,
 });

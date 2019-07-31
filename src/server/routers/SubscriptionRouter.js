@@ -30,7 +30,10 @@ export default class SubscriptionRouter extends RouterBase {
       return Subscription.create({
         name: ctx.request.body.name,
         email: ctx.request.body.email,
-        data: ctx.request.body.data,
+        data: {
+          ...ctx.request.body.data,
+          ip: ctx.request.ip,
+        },
       })
       .then((result) => {
         ctx.body = result;

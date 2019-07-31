@@ -8418,6 +8418,11 @@ redux-observable@^0.16.0:
   resolved "https://registry.yarnpkg.com/redux-observable/-/redux-observable-0.16.0.tgz#dc431d0f47a9c3af232639d6bdd70d80c1b620d9"
   integrity sha512-dFbcUOfIa78mV82muIrDC3K1iYjJ4q/muWklBMub4R9/6QVDwdRysph5+aV933rOUlJf74JSbxpbTO/FA2yKBA==
 
+redux-react-hook@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/redux-react-hook/-/redux-react-hook-3.3.2.tgz#1cdad45009dfa264f46c2a9959d86ce1401df725"
+  integrity sha512-WdKoDA8FF25c9Tzy5iflM0wEbhilNrcXlAMg6OMgoAaH/bF20+A1H8y4c3B7F7oQGRFpAcBmiBiU//ZHd0AfOw==
+
 redux-wait-for-action@^0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/redux-wait-for-action/-/redux-wait-for-action-0.0.7.tgz#13ec487fcef089e04463c588eb83996f3f4df36a"

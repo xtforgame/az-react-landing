@@ -1,6 +1,9 @@
 /* eslint-disable no-undef, no-loop-func, react/self-closing-comp, jsx-a11y/anchor-has-content, jsx-a11y/anchor-is-valid */
 
 import React, { useState } from 'react';
+import { compose } from 'recompose';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 import { useTranslation } from 'react-i18next';
 import { makeStyles, ThemeProvider } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography';
@@ -14,7 +17,11 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import { updatePageContext } from '~/styles/getPageContext';
+import modelMap from '~/containers/App/modelMap';
 
+const {
+  postSubscriptions,
+} = modelMap.waitableActions;
 
 // https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
 const validateEmail = (email) => {
@@ -25,11 +32,10 @@ const validateEmail = (email) => {
 const useStyles = makeStyles(theme => ({
 }));
 
-export default (props) => {
+const Contact = (props) => {
   const classes = useStyles();
 
   const { t } = useTranslation(['builtin-components']);
-
   // console.log('classes :', classes);
 
   const pageContext2 = updatePageContext({ direction: 'ltr', paletteType: 'scoop' });
@@ -59,7 +65,18 @@ export default (props) => {
     } else if (!validateEmail(email)) {
       return setEmailError('Invalid Email');
     }
-    handleClickOpen();
+    return props.postSubscriptions({
+      name,
+      email,
+      data: {},
+    })
+    .then(() => {
+      // setName('');
+      // setEmail('');
+      // setNameError('');
+      // setEmailError('');
+      handleClickOpen();
+    });
   };
 
   return (
@@ -155,3 +172,12 @@ export default (props) => {
     </MuiThemeProvider>
   );
 };
+
+const mapStateToProps = createStructuredSelector({
+});
+
+export default compose(
+  connect(mapStateToProps, {
+    postSubscriptions,
+  }),
+)(Contact);

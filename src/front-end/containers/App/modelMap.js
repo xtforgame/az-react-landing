@@ -201,6 +201,22 @@ const modelsDefine = {
       },
     },
   },
+  subscriptions: {
+    url: './api/subscriptions',
+    names: { model: 'subscription', member: 'subscription', collection: 'subscriptions' },
+    config: {
+      // actionNoRedundantBody: true,
+      getId: data => data.id,
+    },
+    extensionConfigs: {
+      waitableActions: { symbols },
+      epics,
+      selectors: {
+        createSelector,
+        baseSelector: state => state.get('global').organizations,
+      },
+    },
+  },
 };
 
 const modelMap = new ModelMap('global', modelsDefine, defaultExtensions.concat([SelectorsCreator, EpicCreator, WaitableActionsCreator]));
