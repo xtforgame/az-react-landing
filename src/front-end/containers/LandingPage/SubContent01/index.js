@@ -15,6 +15,7 @@ import Header from './parts/Header';
 import InBox from './parts/InBox';
 import Story from './parts/Story';
 import Packs from './parts/Packs';
+import Footer from './parts/Footer';
 
 const useStyles = makeStyles(theme => ({
   topImageContainer01: {
@@ -141,13 +142,7 @@ export default () => {
           className={classnames(classes.topImageContainer05, classes.cardMedia)}
         />
       </div>
-      <div className={classnames(classes.topImageContainer06)}>
-        <CardMedia
-          image="./images/desktop/jpg/bg6-100.jpg"
-          title="Bridge"
-          className={classnames(classes.topImageContainer06, classes.cardMedia)}
-        />
-      </div>
+      <Footer />
     </div>
   );
 };
