@@ -42,16 +42,20 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default () => {
+export default ({ imgSrc, top }) => {
   const classes = useStyles();
   const theme = useTheme();
+  const style = {};
+  if (top != null) {
+    style.top = top;
+  }
   return (
-    <div className={classnames(classes.container)}>
+    <div className={classnames(classes.container)} style={style}>
       <div className={classes.topSpace} />
       <img
         className={classes.title}
         alt="title"
-        src="./images/desktop/svg/whats in the box.svg"
+        src={imgSrc}
         height={60}
       />
       <div className={classes.space} />

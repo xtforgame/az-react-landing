@@ -47,11 +47,11 @@ export default () => {
   return (
     <div className={classnames(classes.mainContainer)}>
       <CardMedia
-        image="./images/desktop/jpg/bg2-100.jpg"
+        image="./images/desktop/jpg/bg3-100.jpg"
         title="Bridge"
         className={classnames(classes.mainContainer, classes.cardMedia)}
       />
-      <SectionTitle imgSrc="./images/desktop/svg/whats in the box.svg" />
+      <SectionTitle imgSrc="./images/desktop/svg/story.svg" top={100} />
       <Content />
     </div>
   );
