@@ -25,23 +25,34 @@ const useStyles = makeStyles(theme => ({
     right: 0,
     position: 'absolute',
   },
+  text: {
+    top: 0,
+    right: 0,
+    position: 'absolute',
+  },
 }));
 
-export default () => {
+export default ({ textImgSrc }) => {
   const classes = useStyles();
   const theme = useTheme();
   return (
     <div className={classnames(classes.container)}>
       <img
         className={classes.gradient}
-        alt="gamesvg"
+        alt="gradient"
         src="./images/desktop/svg/gradient 400.svg"
         width={width}
       />
       <img
         className={classes.frame}
-        alt="gamesvg"
+        alt="frame"
         src="./images/desktop/svg/frame 400.svg"
+        width={width}
+      />
+      <img
+        className={classes.text}
+        alt="text"
+        src={textImgSrc}
         width={width}
       />
     </div>

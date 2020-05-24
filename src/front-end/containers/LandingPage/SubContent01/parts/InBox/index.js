@@ -6,9 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import { grey } from '@material-ui/core/colors';
-import Left from './Left';
-import Right from './Right';
-import Bottom from './Bottom';
+import SectionTitle from '../shared/SectionTitle';
+import Content from './Content';
 
 const useStyles = makeStyles(theme => ({
   mainContainer: {
@@ -19,7 +18,7 @@ const useStyles = makeStyles(theme => ({
       height: 520,
     },
     [theme.breakpoints.up('md')]: {
-      height: 720,
+      height: 960,
     },
     [theme.breakpoints.up('lg')]: {
       height: 960,
@@ -48,13 +47,12 @@ export default () => {
   return (
     <div className={classnames(classes.mainContainer)}>
       <CardMedia
-        image="./images/desktop/jpg/bg1-100.jpg"
-        title="Header"
+        image="./images/desktop/jpg/bg2-100.jpg"
+        title="Bridge"
         className={classnames(classes.mainContainer, classes.cardMedia)}
       />
-      <Left />
-      <Right />
-      <Bottom />
+      <SectionTitle />
+      <Content />
       {/* <div className={classnames(classes.mainContainer, classes.texts)}>
         <Typography variant="h4" style={{ color: 'white', width: '100%', textAlign: 'center' }}>
           Az React Material UI

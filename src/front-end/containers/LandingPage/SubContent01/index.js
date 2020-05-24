@@ -12,6 +12,7 @@ import Member from './Member';
 import Contact from './Contact';
 
 import Header from './parts/Header';
+import InBox from './parts/InBox';
 
 const useStyles = makeStyles(theme => ({
   topImageContainer01: {
@@ -128,13 +129,7 @@ export default () => {
   return (
     <div>
       <Header />
-      <div className={classnames(classes.topImageContainer02)}>
-        <CardMedia
-          image="./images/desktop/jpg/bg2-100.jpg"
-          title="Bridge"
-          className={classnames(classes.topImageContainer02, classes.cardMedia)}
-        />
-      </div>
+      <InBox />
       <div className={classnames(classes.topImageContainer03)}>
         <CardMedia
           image="./images/desktop/jpg/bg3-100.jpg"
@@ -162,127 +157,6 @@ export default () => {
           title="Bridge"
           className={classnames(classes.topImageContainer06, classes.cardMedia)}
         />
-      </div>
-      <Section
-        title="Az React Material UI"
-        subtitle="Az React Material UI"
-      >
-        <div style={{ width: '100%', height: 90 }} />
-        {/* <div style={{ width: '100%', height: 500 }} /> */}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-          }}
-        >
-          <div
-            style={{ maxWidth: 900, margin: '0px auto 0px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}
-          >
-            <Member
-              image="./mail-assets/logo.png"
-              name="Rick Chen"
-              title="Maintainer"
-              discription="The maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework."
-            />
-            <Member
-              image="./mail-assets/logo.png"
-              name="Rick Chen"
-              title="Maintainer"
-              discription="The maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework."
-            />
-          </div>
-          <div
-            style={{ maxWidth: 900, margin: '0px auto 0px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}
-          >
-            <Member
-              image="./mail-assets/logo.png"
-              name="Rick Chen"
-              title="Maintainer"
-              discription="The maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework."
-            />
-            <Member
-              image="./mail-assets/logo.png"
-              name="Rick Chen"
-              title="Maintainer"
-              discription="The maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework, the maintainer of this framework."
-            />
-          </div>
-        </div>
-      </Section>
-      <Section
-        grey
-        title="Nyan Cat 100 hours"
-      >
-        <div
-          style={{ maxWidth: 900, margin: '0px auto 0px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}
-        >
-          <YouTube
-            videoId="wZZ7oFKsKzY"
-            opts={{
-              width: 300,
-              height: 200,
-              playerVars: { // https://developers.google.com/youtube/player_parameters
-                // autoplay: 1,
-              },
-            }}
-            onReady={() => {
-              console.log('onReady');
-            }}
-          />
-        </div>
-      </Section>
-      <Section
-        title="Testimonials"
-      >
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-          }}
-        >
-          <div
-            style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}
-          >
-            <SimpleMediaCard />
-            <SimpleMediaCard />
-          </div>
-          <div
-            style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}
-          >
-            <SimpleMediaCard />
-            <SimpleMediaCard />
-          </div>
-        </div>
-        <div
-          style={{ maxWidth: 500, margin: '0px auto 0px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', padding: 16 }}
-        >
-          <Button color="primary">
-            More...
-          </Button>
-        </div>
-      </Section>
-      <Section
-        grey
-        title="聯絡我們"
-      >
-        <Contact />
-      </Section>
-      <div
-        style={{
-          background: grey[900],
-          padding: 36,
-        }}
-      >
-        <div
-          style={{ maxWidth: 900, margin: '0px auto 0px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}
-        >
-          <Typography variant="body1" style={{ color: 'white', width: '100%', textAlign: 'center' }}>
-            Az React Material UI
-          </Typography>
-          <div style={{ width: '100%', height: 20 }} />
-        </div>
       </div>
     </div>
   );

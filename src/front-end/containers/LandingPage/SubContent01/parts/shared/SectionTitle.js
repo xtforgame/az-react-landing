@@ -6,26 +6,39 @@ import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import { grey } from '@material-ui/core/colors';
-import Box from './Box';
 
-const width = 420;
+const width = 280;
 
 const useStyles = makeStyles(theme => ({
   container: {
     zIndex: 900,
-    top: 480,
+    top: 0,
+    left: 0,
+    right: 0,
     width: '100%',
     height: 1,
     position: 'absolute',
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'center',
   },
-  around: {
-    flex: 3,
+  title: {
+    flexShrink: 0,
+    // position: 'absolute',
+  },
+  divider: {
+    flexShrink: 0,
+    // position: 'absolute',
+  },
+  topSpace: {
+    flexShrink: 0,
+    width: '100%',
+    height: 90,
   },
   space: {
-    flex: 1,
+    flexShrink: 0,
+    width: '100%',
+    height: 5,
   },
 }));
 
@@ -34,19 +47,20 @@ export default () => {
   const theme = useTheme();
   return (
     <div className={classnames(classes.container)}>
-      <div className={classes.around} />
-      <Box
-        textImgSrc="./images/desktop/svg/the holy city.svg"
+      <div className={classes.topSpace} />
+      <img
+        className={classes.title}
+        alt="title"
+        src="./images/desktop/svg/whats in the box.svg"
+        height={60}
       />
       <div className={classes.space} />
-      <Box
-        textImgSrc="./images/desktop/svg/choose.svg"
+      <img
+        className={classes.divider}
+        alt="divider"
+        src="./images/desktop/svg/b1.svg"
+        height={5}
       />
-      <div className={classes.space} />
-      <Box
-        textImgSrc="./images/desktop/svg/relive.svg"
-      />
-      <div className={classes.around} />
     </div>
   );
 };
