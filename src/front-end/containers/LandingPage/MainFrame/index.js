@@ -47,8 +47,8 @@ class MainFrame extends React.PureComponent {
 
     return (
       <React.Fragment>
-        <MainAppBar />
-        <div className={classes.appBarPlaceholder}>DDDD</div>
+        {/* <MainAppBar />
+        <div className={classes.appBarPlaceholder}>DDDD</div> */}
         {routeView}
       </React.Fragment>
     );

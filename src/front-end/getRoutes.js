@@ -73,7 +73,7 @@ const globalRouteConfig = {
     routes: [{
       name: 'redirect',
       path: '/',
-      component: () => <Redirect to={{ pathname: '/home' }} />,
+      component: () => <Redirect to={{ pathname: '/landing1' }} />,
       exact: true,
     },
     {

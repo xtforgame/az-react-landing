@@ -11,108 +11,17 @@ import Section from './Section';
 import Member from './Member';
 import Contact from './Contact';
 
-import Header from './parts/Header';
-
 const useStyles = makeStyles(theme => ({
-  topImageContainer01: {
+  topImageContainer: {
     width: '100%',
     height: 400,
     [theme.breakpoints.up('sm')]: {
       height: 520,
-    },
-    [theme.breakpoints.up('md')]: {
-      height: 720,
-    },
-    [theme.breakpoints.up('lg')]: {
-      height: 960,
-    },
-    [theme.breakpoints.up('xl')]: {
-      height: 1020,
-    },
-  },
-  topImageContainer02: {
-    width: '100%',
-    height: 400,
-    [theme.breakpoints.up('sm')]: {
-      height: 520,
-    },
-    [theme.breakpoints.up('md')]: {
-      height: 720,
-    },
-    [theme.breakpoints.up('lg')]: {
-      height: 960,
-    },
-    [theme.breakpoints.up('xl')]: {
-      height: 1020,
-    },
-  },
-  topImageContainer03: {
-    width: '100%',
-    height: 400,
-    [theme.breakpoints.up('sm')]: {
-      height: 520,
-    },
-    [theme.breakpoints.up('md')]: {
-      height: 720,
-    },
-    [theme.breakpoints.up('lg')]: {
-      height: 960,
-    },
-    [theme.breakpoints.up('xl')]: {
-      height: 1020,
-    },
-  },
-  topImageContainer04: {
-    width: '100%',
-    height: 400,
-    [theme.breakpoints.up('sm')]: {
-      height: 520,
-    },
-    [theme.breakpoints.up('md')]: {
-      height: 720,
-    },
-    [theme.breakpoints.up('lg')]: {
-      height: 960,
-    },
-    [theme.breakpoints.up('xl')]: {
-      height: 1020,
-    },
-  },
-  topImageContainer05: {
-    width: '100%',
-    height: 400,
-    [theme.breakpoints.up('sm')]: {
-      height: 520,
-    },
-    [theme.breakpoints.up('md')]: {
-      height: 720,
-    },
-    [theme.breakpoints.up('lg')]: {
-      height: 960,
-    },
-    [theme.breakpoints.up('xl')]: {
-      height: 1020,
-    },
-  },
-  topImageContainer06: {
-    width: '100%',
-    height: 400,
-    [theme.breakpoints.up('sm')]: {
-      height: 520,
-    },
-    [theme.breakpoints.up('md')]: {
-      height: 720,
-    },
-    [theme.breakpoints.up('lg')]: {
-      height: 960,
-    },
-    [theme.breakpoints.up('xl')]: {
-      height: 1020,
     },
   },
   cardMedia: {
     position: 'absolute',
-    // filter: 'brightness(0.5)',
+    filter: 'brightness(0.5)',
   },
   texts: {
     position: 'absolute',
@@ -127,41 +36,37 @@ export default () => {
   const theme = useTheme();
   return (
     <div>
-      <Header />
-      <div className={classnames(classes.topImageContainer02)}>
+      <div className={classnames(classes.topImageContainer)}>
         <CardMedia
-          image="./images/desktop/jpg/bg2-100.jpg"
+          image="./images/StockSnap_3FOSIEZDTW.jpg"
           title="Bridge"
-          className={classnames(classes.topImageContainer02, classes.cardMedia)}
+          className={classnames(classes.topImageContainer, classes.cardMedia)}
         />
-      </div>
-      <div className={classnames(classes.topImageContainer03)}>
-        <CardMedia
-          image="./images/desktop/jpg/bg3-100.jpg"
-          title="Bridge"
-          className={classnames(classes.topImageContainer03, classes.cardMedia)}
-        />
-      </div>
-      <div className={classnames(classes.topImageContainer04)}>
-        <CardMedia
-          image="./images/desktop/jpg/bg4-100.jpg"
-          title="Bridge"
-          className={classnames(classes.topImageContainer04, classes.cardMedia)}
-        />
-      </div>
-      <div className={classnames(classes.topImageContainer05)}>
-        <CardMedia
-          image="./images/desktop/jpg/bg5-100.jpg"
-          title="Bridge"
-          className={classnames(classes.topImageContainer05, classes.cardMedia)}
-        />
-      </div>
-      <div className={classnames(classes.topImageContainer06)}>
-        <CardMedia
-          image="./images/desktop/jpg/bg6-100.jpg"
-          title="Bridge"
-          className={classnames(classes.topImageContainer06, classes.cardMedia)}
-        />
+        <div className={classnames(classes.topImageContainer, classes.texts)}>
+          <Typography variant="h4" style={{ color: 'white', width: '100%', textAlign: 'center' }}>
+            Az React Material UI
+          </Typography>
+          <Typography variant="h4" style={{ color: 'white', width: '100%', textAlign: 'center' }}>
+            <br />
+          </Typography>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
+            <Button
+              variant="outlined"
+              color="primary"
+              style={{
+                borderWidth: 2,
+                borderColor: theme.palette.primary.main,
+              }}
+            >
+              立即開始
+            </Button>
+          </div>
+        </div>
       </div>
       <Section
         title="Az React Material UI"
