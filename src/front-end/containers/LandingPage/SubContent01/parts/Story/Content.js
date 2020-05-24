@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   container2: {
     flexShrink: 0,
     width: '100%',
-    position: 'relativ',
+    position: 'relative',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',

@@ -6,13 +6,16 @@ import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import { grey } from '@material-ui/core/colors';
+import Box1 from './Box1';
+import VS from './VS';
+import Box2 from './Box2';
 
 const width = 280;
 
 const useStyles = makeStyles(theme => ({
   container: {
     zIndex: 900,
-    top: 100,
+    top: 40,
     left: 0,
     right: 0,
     width: '100%',
@@ -29,6 +32,9 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'row',
     justifyContent: 'center',
   },
+  prices: {
+    height: 220,
+  },
   title: {
     flexShrink: 0,
     // position: 'absolute',
@@ -37,27 +43,11 @@ const useStyles = makeStyles(theme => ({
     flexShrink: 0,
     // position: 'absolute',
   },
-  topSpace: {
-    flexShrink: 0,
-    width: '100%',
-    height: 90,
+  around: {
+    flex: 5,
   },
   space: {
-    flexShrink: 0,
-    width: '100%',
-    height: 5,
-  },
-  ul: {
-    color: 'white',
-  },
-  li: {
-    margin: '0',
-    padding: '4px 0 4px 16px',
-    listStyle: 'none',
-    backgroundImage: 'url("./images/desktop/svg/b2.svg")',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'left center',
-    backgroundSize: 8,
+    flex: 1,
   },
 }));
 
@@ -66,38 +56,25 @@ export default () => {
   const theme = useTheme();
   return (
     <div className={classnames(classes.container)}>
-      <div className={classnames(classes.container2)}>
-        <img
-          className={classes.title}
-          alt="title"
-          src="./images/desktop/png/image2.png"
-          width={600}
-        />
-      </div>
       <div className={classes.space} />
-      <div className={classnames(classes.container2)}>
-        <ul className={classes.ul}>
-          <li className={classes.li}>1 Scoreboard</li>
-          <li className={classes.li}>48 Construction Cards</li>
-          <li className={classes.li}>1 Temple Tile</li>
-          <li className={classes.li}>1 City Gate Tile</li>
-          <li className={classes.li}>18 Worker Tokens</li>
-          <li className={classes.li}>6 Score Tokens</li>
-          <li className={classes.li}>64 Wall Tokens</li>
-        </ul>
+      <div className={classnames(classes.container2, classes.prices)}>
+        <div className={classes.around} />
+        <Box1
+          textImgSrc="./images/desktop/svg/the holy city.svg"
+        />
+        {/* <div className={classes.space} /> */}
+        <VS />
+        {/* <div className={classes.space} /> */}
+        <Box2
+          textImgSrc="./images/desktop/svg/relive.svg"
+        />
+        <div className={classes.around} />
       </div>
       <div className={classnames(classes.container2)}>
         <img
           alt="subtitle"
           src="./images/desktop/svg/pre-order now.svg"
           width={280}
-        />
-      </div>
-      <div className={classnames(classes.container2)}>
-        <img
-          alt="subtitle"
-          src="./images/desktop/svg/plus.svg"
-          width={160}
         />
       </div>
     </div>

@@ -14,6 +14,7 @@ import Contact from './Contact';
 import Header from './parts/Header';
 import InBox from './parts/InBox';
 import Story from './parts/Story';
+import Packs from './parts/Packs';
 
 const useStyles = makeStyles(theme => ({
   topImageContainer01: {
@@ -132,13 +133,7 @@ export default () => {
       <Header />
       <InBox />
       <Story />
-      <div className={classnames(classes.topImageContainer04)}>
-        <CardMedia
-          image="./images/desktop/jpg/bg4-100.jpg"
-          title="Bridge"
-          className={classnames(classes.topImageContainer04, classes.cardMedia)}
-        />
-      </div>
+      <Packs />
       <div className={classnames(classes.topImageContainer05)}>
         <CardMedia
           image="./images/desktop/jpg/bg5-100.jpg"
