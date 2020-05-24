@@ -61,3 +61,8 @@ services:
     # ports:
     #   - "443:443"
     #   - "80:80"
+
+networks:
+  default:
+    external:
+      name: mainginx_net
