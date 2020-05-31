@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import YouTube from 'react-youtube';
 import classnames from 'classnames';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -29,6 +29,8 @@ const useStyles = makeStyles(theme => ({
     top: (370 - 290) / 2,
     left: (370 - 290) / 2,
     position: 'absolute',
+    width: 513,
+    height: 290,
   },
   content: {
     top: 0,
@@ -50,6 +52,7 @@ const useStyles = makeStyles(theme => ({
 export default ({ videoImgSrc }) => {
   const classes = useStyles();
   const theme = useTheme();
+  const [showVideoImage, setShowVideoImage] = useState(true);
   return (
     <div className={classnames(classes.container)}>
       <img
@@ -64,12 +67,6 @@ export default ({ videoImgSrc }) => {
         src="./images/desktop/svg/frame 1660.svg"
         width={width}
       />
-      <img
-        className={classes.video}
-        alt="text"
-        src="./images/desktop/png/video.png"
-        width={513}
-      />
       <div
         className={classes.content}
       >
@@ -83,6 +80,49 @@ export default ({ videoImgSrc }) => {
           Nehemiah rallied together the remnant of Jews in Judah. They worked night and day to rebuild the gates and walls of Jerusalem, while keeping a lookout for enemy attack. At the end, the city walls were fully restored, and the people of Jerusalem and her Temple are now safe. Nehemiah had achieved his mission within 52 days.
         </div>
       </div>
+      {
+        showVideoImage && (
+          <img
+            className={classes.video}
+            alt="text"
+            src="./images/desktop/png/video.png"
+            width={513}
+          />
+        )
+      }
+      {
+        showVideoImage && (
+          <img
+            className={classes.video}
+            alt="text"
+            src="./images/desktop/svg/video btn.svg"
+            width={50}
+            onClick={() => setShowVideoImage(false)}
+          />
+        )
+      }
+      {
+        !showVideoImage && (
+          <div className={classes.video}>
+            <YouTube
+              videoId="lJfW02T6Lys"
+              opts={{
+                width: 513,
+                height: 290,
+                playerVars: { // https://developers.google.com/youtube/player_parameters
+                  autoplay: 1,
+                },
+              }}
+              onReady={() => {
+                console.log('onReady');
+              }}
+              onEnd={() => {
+                setShowVideoImage(true);
+              }}
+            />
+          </div>
+        )
+      }
     </div>
   );
 };
