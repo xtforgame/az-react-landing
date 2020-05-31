@@ -6,6 +6,10 @@ import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import { grey } from '@material-ui/core/colors';
+import LeftTop from './LeftTop';
+import LeftBottom from './LeftBottom';
+import RightTop from './RightTop';
+import RightBottom from './RightBottom';
 
 const width = 280;
 
@@ -18,8 +22,15 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     height: 1,
     position: 'absolute',
+    // display: 'flex',
+    // flexDirection: 'column',
+  },
+  container2: {
+    flexShrink: 0,
+    width: '100%',
+    position: 'relative',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
     justifyContent: 'center',
   },
   title: {
@@ -30,49 +41,44 @@ const useStyles = makeStyles(theme => ({
     flexShrink: 0,
     // position: 'absolute',
   },
-  topSpace: {
-    flexShrink: 0,
-    width: '100%',
-    height: 90,
-  },
   space: {
     flexShrink: 0,
     width: '100%',
-    height: 5,
+    height: 20,
+  },
+  space2: {
+    flexShrink: 0,
+    width: '100%',
+    height: 30,
+  },
+  inputTextBox: {
+    height: 50,
+    width: 300,
+    fontSize: 12,
+    fontWeight: 500,
+    outline: 'none',
+    border: 'solid',
+    borderWidth: 1,
+    padding: 12,
+  },
+  inputFlex: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
 }));
 
-export default ({ withoutDivider, imgSrc, withOutTopSpace, top }) => {
+export default () => {
   const classes = useStyles();
   const theme = useTheme();
-  const style = {};
-  if (top != null) {
-    style.top = top;
-  }
   return (
-    <div className={classnames(classes.container)} style={style}>
-      <div className={classes.topSpace} />
-      <img
-        className={classes.title}
-        alt="title"
-        src={imgSrc}
-        height={60}
-      />
-      {
-        !withoutDivider && (
-          <div className={classes.space} />
-        )
-      }
-      {
-        !withoutDivider && (
-          <img
-            className={classes.divider}
-            alt="divider"
-            src="./images/desktop/svg/b1.svg"
-            height={5}
-          />
-        )
-      }
+    <div className={classnames(classes.container)}>
+      <div className={classes.inputFlex}>
+        <LeftTop />
+        <LeftBottom />
+        <RightTop />
+        <RightBottom />
+      </div>
     </div>
   );
 };

@@ -15,6 +15,7 @@ import Header from './parts/Header';
 import InBox from './parts/InBox';
 import Story from './parts/Story';
 import Packs from './parts/Packs';
+import SignUp from './parts/SignUp';
 import Footer from './parts/Footer';
 
 const useStyles = makeStyles(theme => ({
@@ -135,13 +136,7 @@ export default () => {
       <InBox />
       <Story />
       <Packs />
-      <div className={classnames(classes.topImageContainer05)}>
-        <CardMedia
-          image="./images/desktop/jpg/bg5-100.jpg"
-          title="Bridge"
-          className={classnames(classes.topImageContainer05, classes.cardMedia)}
-        />
-      </div>
+      <SignUp />
       <Footer />
     </div>
   );
