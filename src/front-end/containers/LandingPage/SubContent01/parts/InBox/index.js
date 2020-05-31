@@ -18,13 +18,13 @@ const useStyles = makeStyles(theme => ({
       height: 520,
     },
     [theme.breakpoints.up('md')]: {
-      height: 960,
+      height: 800,
     },
     [theme.breakpoints.up('lg')]: {
-      height: 960,
+      height: 800,
     },
     [theme.breakpoints.up('xl')]: {
-      height: 1020,
+      height: 800,
     },
   },
   cardMedia: {

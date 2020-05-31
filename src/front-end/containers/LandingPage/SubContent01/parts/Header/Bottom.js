@@ -13,7 +13,7 @@ const width = 420;
 const useStyles = makeStyles(theme => ({
   container: {
     zIndex: 900,
-    top: 480,
+    top: '70%', // 480,
     width: '100%',
     height: 1,
     position: 'absolute',
@@ -37,14 +37,17 @@ export default () => {
       <div className={classes.around} />
       <Box
         textImgSrc="./images/desktop/svg/the holy city.svg"
+        contentText="The city walls of Jerusalem are in ruins! The holy city and her Temple lay unprotected to the neighboring enemies. You and other players must work together to rebuild the city……or not!"
       />
       <div className={classes.space} />
       <Box
         textImgSrc="./images/desktop/svg/choose.svg"
+        contentText="By strategically placing towers, bazaars, altars and domino walls around the Holy Temple, players can work together or compete with each other to determine the fate of the city."
       />
       <div className={classes.space} />
       <Box
         textImgSrc="./images/desktop/svg/relive.svg"
+        contentText="52 Days is a 2-6 players board game with a wall-building & blocking mechanism that plays in 1 hour. Relive Biblical history with this fun and exciting action-strategic game!"
       />
       <div className={classes.around} />
     </div>

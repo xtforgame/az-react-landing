@@ -7,7 +7,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import { grey } from '@material-ui/core/colors';
 
-const width = 960;
+const width = 830;
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -26,9 +26,24 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
   },
   video: {
-    top: (428 - 290) / 2,
-    left: (428 - 290) / 2,
+    top: (370 - 290) / 2,
+    left: (370 - 290) / 2,
     position: 'absolute',
+  },
+  content: {
+    top: 0,
+    left: 0,
+    paddingTop: (370 - 290) / 2,
+    paddingLeft: 580,
+    paddingRight: (370 - 290) / 2,
+    position: 'absolute',
+  },
+  contentText: {
+    width: '125%',
+    color: 'black',
+    fontSize: 12,
+    transformOrigin: 'top left',
+    transform: 'scale(0.8)',
   },
 }));
 
@@ -55,6 +70,19 @@ export default ({ videoImgSrc }) => {
         src="./images/desktop/png/video.png"
         width={513}
       />
+      <div
+        className={classes.content}
+      >
+        <div className={classes.contentText}>
+          It is the year 444 BC, during the Second Temple period in Jewish history. The city of Jerusalem lay unprotected from neighboring enemies, because its city walls had been destroyed.
+        </div>
+        <div className={classes.contentText}>
+          Nehemiah, the cup-bearer to the king of Persia, returned to the holy city with a mission: to rebuild the city walls of Jerusalem, and the Jewish community living there. But he must act quickly, because the surrounding enemies will try everything to stop him.
+        </div>
+        <div className={classes.contentText}>
+          Nehemiah rallied together the remnant of Jews in Judah. They worked night and day to rebuild the gates and walls of Jerusalem, while keeping a lookout for enemy attack. At the end, the city walls were fully restored, and the people of Jerusalem and her Temple are now safe. Nehemiah had achieved his mission within 52 days.
+        </div>
+      </div>
     </div>
   );
 };

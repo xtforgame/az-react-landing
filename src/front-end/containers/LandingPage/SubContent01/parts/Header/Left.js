@@ -12,8 +12,8 @@ const width = 280;
 const useStyles = makeStyles(theme => ({
   container: {
     zIndex: 900,
-    top: 80,
-    left: 100,
+    top: '12%', // 80,
+    left: '15%', // 100,
     width,
     height: 1,
     position: 'absolute',

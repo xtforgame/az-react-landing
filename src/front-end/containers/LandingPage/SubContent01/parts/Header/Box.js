@@ -30,9 +30,20 @@ const useStyles = makeStyles(theme => ({
     right: 0,
     position: 'absolute',
   },
+  content: {
+    color: 'white',
+    top: 0,
+    left: 0,
+    paddingTop: 76,
+    paddingLeft: 18,
+    paddingRight: 18,
+    position: 'absolute',
+    fontSize: 12,
+    transform: 'scale(0.8)',
+  },
 }));
 
-export default ({ textImgSrc }) => {
+export default ({ textImgSrc, contentText }) => {
   const classes = useStyles();
   const theme = useTheme();
   return (
@@ -55,6 +66,11 @@ export default ({ textImgSrc }) => {
         src={textImgSrc}
         width={width}
       />
+      <div
+        className={classes.content}
+      >
+        {contentText}
+      </div>
     </div>
   );
 };
