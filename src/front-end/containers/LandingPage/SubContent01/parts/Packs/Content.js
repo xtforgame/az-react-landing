@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import { grey } from '@material-ui/core/colors';
+import PreOrderButton from '../shared/PreOrderButton';
 import Box1 from './Box1';
 import VS from './VS';
 import Box2 from './Box2';
@@ -71,11 +72,7 @@ export default () => {
         <div className={classes.around} />
       </div>
       <div className={classnames(classes.container2)}>
-        <img
-          alt="subtitle"
-          src="./images/desktop/svg/pre-order now.svg"
-          width={280}
-        />
+        <PreOrderButton />
       </div>
     </div>
   );
