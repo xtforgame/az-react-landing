@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import { grey } from '@material-ui/core/colors';
+import PreOrderButton from '../shared/PreOrderButton';
 
 const width = 280;
 
@@ -87,11 +88,7 @@ export default () => {
         </ul>
       </div>
       <div className={classnames(classes.container2)}>
-        <img
-          alt="subtitle"
-          src="./images/desktop/svg/pre-order now.svg"
-          width={280}
-        />
+        <PreOrderButton />
       </div>
       <div className={classnames(classes.container2)}>
         <img

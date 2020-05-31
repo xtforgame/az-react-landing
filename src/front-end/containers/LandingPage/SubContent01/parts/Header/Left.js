@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import { grey } from '@material-ui/core/colors';
+import PreOrderButton from '../shared/PreOrderButton';
 
 const width = 280;
 
@@ -28,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     left: 20,
     position: 'absolute',
   },
-  proordernow: {
+  preordernow: {
     top: 220,
     position: 'absolute',
   },
@@ -51,12 +52,11 @@ export default () => {
         src="./images/desktop/svg/rebuild_the_holy_city.svg"
         width={width - 40}
       />
-      <img
-        className={classes.proordernow}
-        alt="subtitle"
-        src="./images/desktop/svg/pre-order now.svg"
-        width={width}
-      />
+      <div
+        className={classes.preordernow}
+      >
+        <PreOrderButton />
+      </div>
     </div>
   );
 };

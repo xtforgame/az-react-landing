@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 import classnames from 'classnames';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
-const width = 280;
+const width = 110;
 
 const useStyles = makeStyles(theme => ({
   container: {
     width,
-    height: 83,
+    height: 60,
     position: 'relative',
   },
-  preordernow: {
+  sendnow: {
     top: 0,
     position: 'absolute',
     transitionProperty: 'transform',
     transitionDuration: '0.3s',
   },
-  preordernowhover: {
+  sendnowhover: {
     top: 0,
     transform: 'translate(2px, -8px)',
     transitionProperty: 'transform',
@@ -38,9 +38,9 @@ export default (style) => {
       onMouseLeave={() => setHover(false)}
     >
       <img
-        className={hover ? classes.preordernowhover : classes.preordernow}
+        className={hover ? classes.sendnowhover : classes.sendnow}
         alt="subtitle"
-        src="./images/desktop/svg/pre-order now.svg"
+        src="./images/desktop/svg/send.svg"
         width={width}
       />
     </div>

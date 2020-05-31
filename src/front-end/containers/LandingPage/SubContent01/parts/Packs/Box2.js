@@ -19,11 +19,13 @@ const useStyles = makeStyles(theme => ({
     top: 0,
     left: 0,
     position: 'absolute',
+    animation: 'spin 8s linear infinite;',
   },
   frame: {
     top: 0,
     left: 0,
     position: 'absolute',
+    animation: 'spin 8s linear infinite;',
   },
   price: {
     top: 0,

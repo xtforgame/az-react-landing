@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import { grey } from '@material-ui/core/colors';
-import LeftTop from './LeftTop';
+import SendButton from '../shared/SendButton';
 
 const width = 280;
 
@@ -83,12 +83,13 @@ export default () => {
           className={classes.inputTextBox}
         />
         <div className={classes.space2} />
-        <img
+        <SendButton />
+        {/* <img
           alt="send"
           src="./images/desktop/svg/send.svg"
           // width={width}
           height={60}
-        />
+        /> */}
       </div>
     </div>
   );
