@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
   container: {
     zIndex: 900,
     top: '12%', // 80,
-    left: '15%', // 100,
+    left: 'calc(50% - 400px)', // 100,
     width,
     height: 1,
     position: 'absolute',

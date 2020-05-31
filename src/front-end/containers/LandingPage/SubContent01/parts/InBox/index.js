@@ -12,10 +12,10 @@ import Content from './Content';
 const useStyles = makeStyles(theme => ({
   mainContainer: {
     width: '100%',
-    height: 400,
+    height: 800,
     position: 'relative',
     [theme.breakpoints.up('sm')]: {
-      height: 520,
+      height: 800,
     },
     [theme.breakpoints.up('md')]: {
       height: 800,

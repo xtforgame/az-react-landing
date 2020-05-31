@@ -13,7 +13,7 @@ import Form from './Form';
 const useStyles = makeStyles(theme => ({
   mainContainer: {
     width: '100%',
-    height: 400,
+    height: 420,
     position: 'relative',
     [theme.breakpoints.up('sm')]: {
       height: 420,

@@ -13,10 +13,10 @@ import Bottom from './Bottom';
 const useStyles = makeStyles(theme => ({
   mainContainer: {
     width: '100%',
-    height: 400,
+    height: 720,
     position: 'relative',
     [theme.breakpoints.up('sm')]: {
-      height: 520,
+      height: 720,
     },
     [theme.breakpoints.up('md')]: {
       height: 720,
