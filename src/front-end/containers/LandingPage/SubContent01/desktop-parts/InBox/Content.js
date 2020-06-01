@@ -73,6 +73,7 @@ export default () => {
           alt="title"
           src="./images/desktop/png/image2.png"
           width={600}
+          height={327}
         />
       </div>
       <div className={classes.space} />
