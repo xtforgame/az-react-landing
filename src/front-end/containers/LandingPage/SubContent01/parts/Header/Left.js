@@ -49,7 +49,7 @@ export default () => {
       <img
         className={classes.subtitle}
         alt="subtitle"
-        src="./images/desktop/svg/rebuild_the_holy_city.svg"
+        src="./images/desktop/svg/rebuild the holy city.svg"
         width={width - 40}
       />
       <div
