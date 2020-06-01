@@ -46,7 +46,7 @@ export default () => {
   const classes = useStyles();
   const theme = useTheme();
   return (
-    <div className={classnames(classes.mainContainer)}>
+    <div id="sign-up" className={classnames(classes.mainContainer)}>
       <Content />
       <CardMedia
         image="./images/desktop/jpg/bg5-100.jpg"

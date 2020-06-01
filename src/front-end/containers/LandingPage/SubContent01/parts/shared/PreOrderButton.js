@@ -36,6 +36,10 @@ export default ({ style }) => {
       className={classnames(classes.container)}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      onClick={() => {
+        const elem = document.getElementById("sign-up");
+        elem.scrollIntoView();
+      }}
     >
       <img
         className={hover ? classes.preordernowhover : classes.preordernow}
