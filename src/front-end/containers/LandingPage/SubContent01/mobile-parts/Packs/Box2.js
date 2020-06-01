@@ -7,12 +7,13 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import { grey } from '@material-ui/core/colors';
 
-const width = 205;
+const width = 320;
 
 const useStyles = makeStyles(theme => ({
   container: {
     width,
-    height: 1,
+    height: width,
+    flexShrink: 0,
     position: 'relative',
   },
   gradient: {
@@ -42,13 +43,13 @@ export default ({ priceImgSrc }) => {
       <img
         className={classes.gradient}
         alt="gradient"
-        src="./images/mobile/svg/m_gradient 410.svg"
+        src="./images/mobile/svg/m_gradient 320.svg"
         width={width}
       />
       <img
         className={classes.frame}
         alt="frame"
-        src="./images/mobile/svg/m_frame 410.svg"
+        src="./images/mobile/svg/m_frame 320.svg"
         width={width}
       />
       <img

@@ -7,12 +7,13 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import { grey } from '@material-ui/core/colors';
 
-const width = 205;
+const width = 320;
 
 const useStyles = makeStyles(theme => ({
   container: {
     width,
-    height: 1,
+    // height: 1,
+    flexShrink: 0,
     position: 'relative',
   },
   gradient: {
@@ -26,9 +27,9 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
   },
   price: {
-    top: 0,
-    left: 0,
-    position: 'absolute',
+    // top: 0,
+    // left: 0,
+    // position: 'absolute',
   },
 }));
 

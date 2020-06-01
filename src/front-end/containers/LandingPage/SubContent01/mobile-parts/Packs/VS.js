@@ -11,9 +11,14 @@ const width = 120;
 
 const useStyles = makeStyles(theme => ({
   container: {
+    zIndex: 900,
     width,
-    height: 1,
+    // height: 1,
     position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    flexShrink: 0,
   },
   gradient: {
     top: 0,
@@ -26,9 +31,9 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
   },
   price: {
-    top: 60,
-    left: (width - 40) / 2,
-    position: 'absolute',
+    // top: 60,
+    // left: (width - 40) / 2,
+    // position: 'absolute',
   },
 }));
 

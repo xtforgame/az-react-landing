@@ -11,27 +11,25 @@ import Box1 from './Box1';
 import VS from './VS';
 import Box2 from './Box2';
 
-const width = 280;
+const width = '100%';
 
 const useStyles = makeStyles(theme => ({
   container: {
     zIndex: 900,
-    top: 40,
-    left: 0,
-    right: 0,
-    width: '100%',
-    height: 1,
+    width,
+    // height: 1,
     position: 'absolute',
-    // display: 'flex',
-    // flexDirection: 'column',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   container2: {
-    flexShrink: 0,
-    width: '100%',
-    position: 'relative',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
+    // flexShrink: 0,
+    // width: '100%',
+    // position: 'relative',
+    // display: 'flex',
+    // flexDirection: 'row',
+    // justifyContent: 'center',
   },
   prices: {
     height: 220,
@@ -48,7 +46,14 @@ const useStyles = makeStyles(theme => ({
     flex: 5,
   },
   space: {
-    flex: 1,
+    width,
+    height: 30,
+    flexShrink: 0,
+  },
+  space2: {
+    width,
+    height: 20,
+    flexShrink: 0,
   },
 }));
 
@@ -58,19 +63,17 @@ export default () => {
   return (
     <div className={classnames(classes.container)}>
       <div className={classes.space} />
-      <div className={classnames(classes.container2, classes.prices)}>
-        <div className={classes.around} />
-        <Box1
-          textImgSrc="./images/mobile/svg/m_the holy city.svg"
-        />
-        {/* <div className={classes.space} /> */}
-        <VS />
-        {/* <div className={classes.space} /> */}
-        <Box2
-          textImgSrc="./images/mobile/svg/m_relive.svg"
-        />
-        <div className={classes.around} />
-      </div>
+      <Box1
+        textImgSrc="./images/mobile/svg/m_the holy city.svg"
+      />
+      <div className={classes.space2} />
+      <VS />
+      <div className={classes.space2} />
+      <Box2
+        textImgSrc="./images/mobile/svg/m_relive.svg"
+      />
+      <div className={classes.space} />
+      <div className={classes.space} />
       <div className={classnames(classes.container2)}>
         <PreOrderButton />
       </div>
