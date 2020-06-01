@@ -13,19 +13,19 @@ import Form from './Form';
 const useStyles = makeStyles(theme => ({
   mainContainer: {
     width: '100%',
-    height: 420,
+    height: 600,
     position: 'relative',
     [theme.breakpoints.up('sm')]: {
-      height: 420,
+      height: 600,
     },
     [theme.breakpoints.up('md')]: {
-      height: 420,
+      height: 600,
     },
     [theme.breakpoints.up('lg')]: {
-      height: 420,
+      height: 600,
     },
     [theme.breakpoints.up('xl')]: {
-      height: 420,
+      height: 600,
     },
   },
   cardMedia: {
@@ -40,6 +40,11 @@ const useStyles = makeStyles(theme => ({
     // flexDirection: 'column',
     // justifyContent: 'center',
   },
+  space2: {
+    flexShrink: 0,
+    width: '100%',
+    height: 10,
+  },
 }));
 
 export default () => {
@@ -53,7 +58,8 @@ export default () => {
         title="Bridge"
         className={classnames(classes.mainContainer, classes.cardMedia)}
       />
-      <SectionTitle withoutDivider imgSrc="./images/mobile/svg/m_sign up.svg" top={50} />
+      <SectionTitle withoutDivider imgSrc="./images/mobile/svg/m_sign up.svg" top={50} height={120} />
+      <div id="sign-up" className={classnames(classes.space2)} />
       <Form />
     </div>
   );

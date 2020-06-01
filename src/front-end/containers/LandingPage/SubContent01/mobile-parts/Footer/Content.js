@@ -8,19 +8,17 @@ import Button from '@material-ui/core/Button';
 import { grey } from '@material-ui/core/colors';
 import Logo from './Logo';
 
-const width = 280;
+const width = '100%';
 
 const useStyles = makeStyles(theme => ({
   container: {
     zIndex: 900,
-    top: 40,
-    left: 0,
-    right: 0,
-    width: '100%',
+    width,
     height: 1,
     position: 'absolute',
-    // display: 'flex',
-    // flexDirection: 'column',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   container2: {
     flexShrink: 0,
@@ -47,6 +45,11 @@ const useStyles = makeStyles(theme => ({
   space: {
     flex: 1,
   },
+  space2: {
+    flexShrink: 0,
+    width,
+    height: 40,
+  },
 }));
 
 export default () => {
@@ -54,12 +57,8 @@ export default () => {
   const theme = useTheme();
   return (
     <div className={classnames(classes.container)}>
-      <div className={classes.space} />
-      <div className={classnames(classes.container2, classes.logo)}>
-        <div className={classes.around} />
-        <Logo />
-        <div className={classes.around} />
-      </div>
+      <Logo />
+      <div className={classnames(classes.space2)} />
       <Typography variant="body1" style={{ color: 'white', width: '100%', textAlign: 'center', fontSize: 12 }}>
         ©2020 BE CREATIONS COMPANY.
       </Typography>

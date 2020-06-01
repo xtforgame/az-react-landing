@@ -15,6 +15,11 @@ const useStyles = makeStyles(theme => ({
     height: 1312,
     position: 'relative',
   },
+  topSpace: {
+    flexShrink: 0,
+    width: '100%',
+    height: 320,
+  },
   cardMedia: {
     position: 'absolute',
     // filter: 'brightness(0.5)',
@@ -39,7 +44,8 @@ export default () => {
         title="Bridge"
         className={classnames(classes.mainContainer, classes.cardMedia)}
       />
-      <SectionTitle imgSrc="./images/mobile/svg/m_story.svg" top={100} />
+      <SectionTitle imgSrc="./images/mobile/svg/m_story.svg" top={200} />
+      <div className={classnames(classes.topSpace)} />
       <Content />
     </div>
   );

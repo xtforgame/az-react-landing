@@ -7,28 +7,27 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import { grey } from '@material-ui/core/colors';
 import Box from './Box';
+import Video from './Video';
 
-const width = 280;
+const width = '100%';
 
 const useStyles = makeStyles(theme => ({
   container: {
     zIndex: 900,
-    top: 220,
-    left: 0,
-    right: 0,
-    width: '100%',
+    width,
     height: 1,
     position: 'absolute',
-    // display: 'flex',
-    // flexDirection: 'column',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   container2: {
-    flexShrink: 0,
+    // flexShrink: 0,
     width: '100%',
-    position: 'relative',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
+    // position: 'relative',
+    // display: 'flex',
+    // flexDirection: 'row',
+    // justifyContent: 'center',
   },
   title: {
     flexShrink: 0,
@@ -55,13 +54,16 @@ export default () => {
           className={classes.title}
           alt="title"
           src="./images/mobile/svg/m_the story behind.svg"
-          width={600}
+          width={width}
         />
       </div>
       <div className={classes.space} />
       <div className={classnames(classes.container2)}>
-        <Box />
+        <Video />
       </div>
+      {/* <div className={classnames(classes.container2)}>
+        <Box />
+      </div> */}
       {/* <div
         style={{ maxWidth: 900, margin: '0px auto 0px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}
       >

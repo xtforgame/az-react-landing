@@ -11,9 +11,13 @@ const width = 160;
 
 const useStyles = makeStyles(theme => ({
   container: {
+    zIndex: 900,
     width,
-    height: 1,
+    // height: 1,
     position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   gradient: {
     top: 0,
@@ -26,9 +30,14 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
   },
   price: {
-    top: 60,
-    left: 0,
-    position: 'absolute',
+    // top: 60,
+    // left: 0,
+    // position: 'absolute',
+  },
+  space: {
+    flexShrink: 0,
+    width,
+    height: 60,
   },
 }));
 
@@ -37,10 +46,11 @@ export default ({ priceImgSrc }) => {
   const theme = useTheme();
   return (
     <div className={classnames(classes.container)}>
+      <div className={classnames(classes.space)} />
       <img
         className={classes.price}
         alt="text"
-        src="./images/mobile/svg/m_logo s.svg"
+        src="./images/mobile/svg/m_logo.svg"
         width={width}
       />
     </div>

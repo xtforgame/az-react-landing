@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default ({ withoutDivider, imgSrc, withOutTopSpace, top }) => {
+export default ({ withoutDivider, imgSrc, withOutTopSpace, top, height = 60 }) => {
   const classes = useStyles();
   const theme = useTheme();
   const style = {};
@@ -56,7 +56,7 @@ export default ({ withoutDivider, imgSrc, withOutTopSpace, top }) => {
         className={classes.title}
         alt="title"
         src={imgSrc}
-        height={60}
+        height={height}
       />
       {
         !withoutDivider && (
