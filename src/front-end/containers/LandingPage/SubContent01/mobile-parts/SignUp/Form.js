@@ -23,19 +23,17 @@ const {
   contactUsMessage,
 } = modelMapEx.querchy.promiseActionCreatorSets;
 
-// const width = 280;
+const width = '100%';
 
 const useStyles = makeStyles(theme => ({
   container: {
     zIndex: 900,
-    top: 170,
-    left: 0,
-    right: 0,
-    width: '100%',
-    height: 1,
+    width,
+    // height: 1,
     position: 'absolute',
-    // display: 'flex',
-    // flexDirection: 'column',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   container2: {
     flexShrink: 0,

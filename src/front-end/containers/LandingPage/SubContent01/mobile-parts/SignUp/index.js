@@ -13,20 +13,8 @@ import Form from './Form';
 const useStyles = makeStyles(theme => ({
   mainContainer: {
     width: '100%',
-    height: 600,
+    height: 832,
     position: 'relative',
-    [theme.breakpoints.up('sm')]: {
-      height: 600,
-    },
-    [theme.breakpoints.up('md')]: {
-      height: 600,
-    },
-    [theme.breakpoints.up('lg')]: {
-      height: 600,
-    },
-    [theme.breakpoints.up('xl')]: {
-      height: 600,
-    },
   },
   cardMedia: {
     position: 'absolute',
@@ -43,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   space2: {
     flexShrink: 0,
     width: '100%',
-    height: 10,
+    height: 360,
   },
 }));
 
@@ -58,7 +46,7 @@ export default () => {
         title="Bridge"
         className={classnames(classes.mainContainer, classes.cardMedia)}
       />
-      <SectionTitle withoutDivider imgSrc="./images/mobile/svg/m_sign up.svg" top={50} height={120} />
+      <SectionTitle withoutDivider imgSrc="./images/mobile/svg/m_sign up.svg" top={240} height={120} />
       <div id="sign-up" className={classnames(classes.space2)} />
       <Form />
     </div>
