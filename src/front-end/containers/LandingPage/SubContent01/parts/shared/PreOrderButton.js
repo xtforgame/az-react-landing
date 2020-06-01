@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default (style) => {
+export default ({ style }) => {
   const classes = useStyles();
   const theme = useTheme();
   const [hover, setHover] = useState(false)

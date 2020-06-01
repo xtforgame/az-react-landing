@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default (style) => {
+export default ({ style, onClick }) => {
   const classes = useStyles();
   const theme = useTheme();
   const [hover, setHover] = useState(false)
@@ -34,6 +34,7 @@ export default (style) => {
     <div
       style={style}
       className={classnames(classes.container)}
+      onClick={onClick}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
