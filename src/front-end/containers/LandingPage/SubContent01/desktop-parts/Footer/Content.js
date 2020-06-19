@@ -61,7 +61,7 @@ export default () => {
         <div className={classes.around} />
       </div>
       <Typography variant="body1" style={{ color: 'white', width: '100%', textAlign: 'center', fontSize: 12 }}>
-        ©2020 BE CREATIONS COMPANY.
+        ©2020 Bethlehem Creations.
       </Typography>
       {/* <div style={{ width: '100%', height: 20 }} /> */}
     </div>

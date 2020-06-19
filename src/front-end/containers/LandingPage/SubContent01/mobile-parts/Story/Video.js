@@ -74,6 +74,13 @@ export default ({ videoImgSrc }) => {
         )
       }
       {
+        !showVideoImage && (
+          <div
+            className={classes.video}
+          />
+        )
+      }
+      {
         showVideoImage && (
           <img
             className={classes.videoOverlay}

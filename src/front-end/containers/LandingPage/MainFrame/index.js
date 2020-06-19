@@ -63,7 +63,7 @@ class MainFrame extends React.PureComponent {
     const loadUserError = null;
 
     return (
-      <div className={classes.verticalFlexContainerFWFH}>
+      <div className={classes.verticalFlexContainerFWFH} style={{ overflowX: 'hidden' }}>
         {(userLoaded && !loadUserError) && this.renderMainContent()}
         <Fade
           in={!userLoaded && !loadUserError}
