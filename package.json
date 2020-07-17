@@ -90,7 +90,7 @@
     "koa-bodyparser": "^4.2.0",
     "koa-multer": "^1.0.2",
     "link-preview-node": "^1.0.4",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.19",
     "minio": "^7.0.5",
     "moment": "^2.22.2",
     "notistack": "^0.9.7",
