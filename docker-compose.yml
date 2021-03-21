@@ -59,8 +59,8 @@ services:
     command: bash docker-cmd.sh
 
     ports:
-      - "443:23002"
-      - "80:23001"
+      - "443:24002"
+      - "80:24001"
 
 networks:
   default:
