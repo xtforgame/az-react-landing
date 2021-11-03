@@ -132,7 +132,7 @@
     "rxjs": "^6.5.2",
     "sequelize": "4.37.5",
     "uuid": "^3.3.2",
-    "validator": "^10.2.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
