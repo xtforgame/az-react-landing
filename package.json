@@ -81,7 +81,7 @@
     "i18next": "^15.0.4",
     "i18next-browser-languagedetector": "^3.0.1",
     "i18next-xhr-backend": "^2.0.1",
-    "jsonpointer": "^4.0.1",
+    "jsonpointer": "^5.0.0",
     "jss": "10.0.0-alpha.16",
     "jss-rtl": "0.2.3",
     "jwt-session-helper": "git+https://github.com/xtforgame/jwt-session-helper.git#v0.1.0",
