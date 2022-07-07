@@ -92,7 +92,7 @@
     "link-preview-node": "^1.0.4",
     "lodash": "^4.17.4",
     "minio": "^7.0.5",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "notistack": "^0.9.7",
     "numeral": "^2.0.6",
     "pg": "7.4.0",
